@@ -15,6 +15,9 @@
 		105F87041A9151FF00BE1E71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105F87031A9151FF00BE1E71 /* Images.xcassets */; };
 		105F87071A9151FF00BE1E71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 105F87051A9151FF00BE1E71 /* LaunchScreen.xib */; };
 		105F87131A91520000BE1E71 /* Email_Game_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F87121A91520000BE1E71 /* Email_Game_2Tests.m */; };
+		105F87221A91536400BE1E71 /* CCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F87211A91536400BE1E71 /* CCConstants.m */; };
+		105F87281A917DEC00BE1E71 /* ScoreChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105F87271A917DEC00BE1E71 /* ScoreChartViewController.m */; };
+		15D8169DCB27F71BED424949 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BA8C414BCB26DE24118665 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,13 @@
 		105F870C1A91520000BE1E71 /* Email Game 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Email Game 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		105F87111A91520000BE1E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		105F87121A91520000BE1E71 /* Email_Game_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Email_Game_2Tests.m; sourceTree = "<group>"; };
+		105F87201A91536400BE1E71 /* CCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCConstants.h; sourceTree = "<group>"; };
+		105F87211A91536400BE1E71 /* CCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCConstants.m; sourceTree = "<group>"; };
+		105F87261A917DEC00BE1E71 /* ScoreChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreChartViewController.h; sourceTree = "<group>"; };
+		105F87271A917DEC00BE1E71 /* ScoreChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreChartViewController.m; sourceTree = "<group>"; };
+		367924CB915C83A14161B9D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		99BA8C414BCB26DE24118665 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38C91DE301F669B7BDE5058 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D8169DCB27F71BED424949 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +79,8 @@
 				105F86F21A9151FF00BE1E71 /* Email Game 2 */,
 				105F870F1A91520000BE1E71 /* Email Game 2Tests */,
 				105F86F11A9151FF00BE1E71 /* Products */,
+				427ADE31DE9C72253360248A /* Pods */,
+				6747C6BA927ADA22B381A683 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +101,8 @@
 				105F86FD1A9151FF00BE1E71 /* ViewController.h */,
 				105F86FE1A9151FF00BE1E71 /* ViewController.m */,
 				105F87001A9151FF00BE1E71 /* Main.storyboard */,
+				105F87261A917DEC00BE1E71 /* ScoreChartViewController.h */,
+				105F87271A917DEC00BE1E71 /* ScoreChartViewController.m */,
 				105F87031A9151FF00BE1E71 /* Images.xcassets */,
 				105F87051A9151FF00BE1E71 /* LaunchScreen.xib */,
 				105F86FA1A9151FF00BE1E71 /* Email_Game_2.xcdatamodeld */,
@@ -101,6 +116,8 @@
 			children = (
 				105F86F41A9151FF00BE1E71 /* Info.plist */,
 				105F86F51A9151FF00BE1E71 /* main.m */,
+				105F87201A91536400BE1E71 /* CCConstants.h */,
+				105F87211A91536400BE1E71 /* CCConstants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +139,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		427ADE31DE9C72253360248A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38C91DE301F669B7BDE5058 /* Pods.debug.xcconfig */,
+				367924CB915C83A14161B9D9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6747C6BA927ADA22B381A683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99BA8C414BCB26DE24118665 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 105F87161A91520000BE1E71 /* Build configuration list for PBXNativeTarget "Email Game 2" */;
 			buildPhases = (
+				113C98A7CBA836CD7015AB41 /* Check Pods Manifest.lock */,
 				105F86EC1A9151FF00BE1E71 /* Sources */,
 				105F86ED1A9151FF00BE1E71 /* Frameworks */,
 				105F86EE1A9151FF00BE1E71 /* Resources */,
+				D7C162E0983EA3A1621F33E4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +253,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		113C98A7CBA836CD7015AB41 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C162E0983EA3A1621F33E4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		105F86EC1A9151FF00BE1E71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,8 +293,10 @@
 			files = (
 				105F86F91A9151FF00BE1E71 /* AppDelegate.m in Sources */,
 				105F86F61A9151FF00BE1E71 /* main.m in Sources */,
+				105F87281A917DEC00BE1E71 /* ScoreChartViewController.m in Sources */,
 				105F86FF1A9151FF00BE1E71 /* ViewController.m in Sources */,
 				105F86FC1A9151FF00BE1E71 /* Email_Game_2.xcdatamodeld in Sources */,
+				105F87221A91536400BE1E71 /* CCConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +416,7 @@
 		};
 		105F87171A91520000BE1E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38C91DE301F669B7BDE5058 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Email Game 2/Info.plist";
@@ -355,6 +427,7 @@
 		};
 		105F87181A91520000BE1E71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 367924CB915C83A14161B9D9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Email Game 2/Info.plist";
@@ -416,6 +489,7 @@
 				105F87181A91520000BE1E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		105F87191A91520000BE1E71 /* Build configuration list for PBXNativeTarget "Email Game 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +498,7 @@
 				105F871B1A91520000BE1E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
