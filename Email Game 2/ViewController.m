@@ -30,11 +30,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     FBLoginView *loginView = [[FBLoginView alloc] init];
     //have not figured out readPermissions yet
-    //loginView.readPermissions = @[@"basic_info", @"email", @"user_likes"];
+    loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     loginView.delegate = self;
-    loginView.center = self.view.center;
+    //replaced the code login picture with storyboard FBLoginView uiview.
+    //loginView.center = self.view.center;
     [self.view addSubview:loginView];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,8 +46,17 @@
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
+    NSLog(@"the user is %@",user.name);
     self.profilePictureView.profileID = user.objectID;
     self.nameLabel.text = user.name;
+    
+//    PFObject *score = [PFObject objectWithClassName:@"Score"];
+//    //There is an error at this line.  Error states that the value is 0
+//    [score setObject:user.name forKey:@"Name"];
+//    [score setObject:@"test2" forKey:@"Test2"];
+//    [score saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        NSLog(@"Score saved successfully");
+//    }];
 }
 
 // Logged-in user experience
@@ -64,9 +73,9 @@
 }
 
 
-
 // Handle possible errors that can occur during login
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
+    NSLog(@"%@", [error localizedDescription]);
     NSString *alertMessage, *alertTitle;
     
     // If the user performs an action outside of you app to recover,

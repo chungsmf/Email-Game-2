@@ -32,10 +32,20 @@
                                 <rect key="frame" x="92" y="377" width="265" height="167"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-pH-MUc" customClass="FBLoginView">
+                                <rect key="frame" x="121" y="283" width="206" height="33"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IlA-en-98f"/>
+                    <navigationItem key="navigationItem" id="IlA-en-98f">
+                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="SHe-gG-9tq">
+                            <connections>
+                                <segue destination="b6v-Zt-dVu" kind="show" id="GQR-hJ-9OI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameLabel" destination="hwR-nn-zrj" id="zX9-aJ-IMB"/>
                         <outlet property="profilePictureView" destination="HeK-pQ-RuY" id="vdt-70-zq0"/>
@@ -88,6 +98,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="emailScoreMinus:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="Iw2-ve-tKC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xY-OA-0Fr">
                                 <rect key="frame" x="342" y="341" width="42" height="21"/>
@@ -118,38 +131,69 @@
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="meetingScoreMinus:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="kJ1-Rf-YoH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-Aq-kIm">
                                 <rect key="frame" x="251" y="187" width="46" height="30"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="meetingScorePlus:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="qsr-D5-WWh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-UI-vdk">
                                 <rect key="frame" x="197" y="259" width="46" height="30"/>
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionItemMinus:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="p1j-Ro-fAN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR4-w8-ULJ">
                                 <rect key="frame" x="251" y="259" width="46" height="30"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionItemScore:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="QNV-w8-2kz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-7l-dtK">
-                                <rect key="frame" x="251" y="129" width="46" height="30"/>
+                                <rect key="frame" x="251" y="125" width="46" height="30"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="emailScorePlus:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="rvy-JR-e4r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zl7-4F-lgU">
+                                <rect key="frame" x="230" y="458" width="46" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="b6v-Zt-dVu" eventType="touchUpInside" id="X9l-nv-ELP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="actionItemScoreLabel" destination="gEr-jR-yi7" id="Bhk-FL-Gd3"/>
+                        <outlet property="emailLabel" destination="hmn-7W-MQu" id="MgK-ol-4Tn"/>
+                        <outlet property="emailScoreLabel" destination="TzS-E2-D2R" id="QuR-DS-eK7"/>
+                        <outlet property="meetingScoreLabel" destination="awd-nu-81y" id="ELj-R7-6jI"/>
+                        <outlet property="totalScoreLabel" destination="7xY-OA-0Fr" id="kcW-uh-E2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMo-36-sM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="337"/>
+            <point key="canvasLocation" x="1779" y="298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zE0-2I-73v">
@@ -170,4 +214,7 @@
             <point key="canvasLocation" x="223" y="337"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xgg-dy-GkS"/>
+    </inferredMetricsTieBreakers>
 </document>
